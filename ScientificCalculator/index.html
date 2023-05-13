@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<hrml>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculation.js"></script>
+</head>
+<body>
+    <div class="container"> 
+        <div class="calci">
+            <form action="">
+                <center>
+                    <span style="color:aqua">Scientific Calculator</span>
+                </center>
+                <div class="display">
+                    <input type="text" name="display" placeholder="0.00">
+                </div>
+                <div>
+                    <input type="button" value="AC"  class="AC" onclick="display.value =''">  
+                    <input type="button" value="DE" class="DE" onclick="display.value =display.value.toString().slice(0,(display.value.toString().length-1))">
+                    <input type="button" value="(" class="fn" onclick="display.value +='(' ">
+                    <input type="button" value=")" class="fn" onclick="display.value +=')' ">
+                </div>
+                <div>
+                    <input type="button" value="2√" class="fn"  onclick="calSqrt(this.form)">
+                    <input type="button" value="l10e" class="fn"  onclick="calLog10(this.form)">
+                    <input type="button" value="ex" class="fn"  onclick="calExp(this.form)">
+                    <input type="button" value="n!" class="fn"  onclick="calFact(this.form)">
+                </div>
+                <div>
+                    <input type="button" value="^" class="fn" onclick="display.value +='^'">
+                    <input type="button" value="π" class="fn" onclick="display.value +='3.14159'">
+                    <input type="button" value="log" class="fn" onclick="calLog(this.form)">
+                    <input type="button" value="%" class="fn" onclick="display.value +='%'">
+                </div>
+                <div>
+                    <input type="button" value="sin" class="fn" onclick="calSin(this.form)">
+                    <input type="button" value="cos" class="fn" onclick="calCos(this.form)">
+                    <input type="button" value="tan" class="fn" onclick="calTan(this.form)">
+                    <input type="button" value="/" class="fn" onclick="display.value +='/'">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value +='7'">
+                    <input type="button" value="8" onclick="display.value +='8'">
+                    <input type="button" value="9" onclick="display.value +='9'">
+                    <input type="button" value="*" class="fn" onclick="display.value +='*'">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value +='4'">
+                    <input type="button" value="5" onclick="display.value +='5'">
+                    <input type="button" value="6" onclick="display.value +='6'">
+                    <input type="button" value="-" class="fn" onclick="display.value +='-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value +='1'">
+                    <input type="button" value="2" onclick="display.value +='2'">
+                    <input type="button" value="3" onclick="display.value +='3'">
+                    <input type="button" value="+" class="fn" onclick="display.value +='+'">
+                </div>
+                <div>
+                    <input type="button" value="," class="fn" onclick="display.value +=','">
+                    <input type="button" value="0" onclick="display.value +='0'">
+                    <input type="button" value="." class="fn" onclick="display.value +='.'">
+                    <input type="button" value="=" class="equal" onclick="calculator(this.form)">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</hrml>
