@@ -16,7 +16,14 @@ function calculator(calc){
         }
     }
     else{
-        calc.display.value = eval(val)
+        let result = eval(val)
+        result = ""+result
+        if(result.includes(".")){
+            calc.display.value = decimal(result,decimalLen)
+        }
+        else{
+            calc.display.value = result
+        }
     }
 }
 
